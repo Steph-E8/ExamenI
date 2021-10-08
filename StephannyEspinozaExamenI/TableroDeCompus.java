@@ -8,34 +8,64 @@ public class TableroDeCompus
 {
     private Computadora compu;
     private Computadora[][] matrizDeCompus;
+    private TableroDeCompus tablero;
     private Arbitro arbitro;
-    private Controlador controlador;
+    private int contador;
+    private int contadorDos;
+    private int [][] matrizDeEspaciosComputadora;
 
-    public TableroDeCompus()
+    public TableroDeCompus(int filas, int columnas)
     {
         this.compu= compu;
-        this.matrizDeCompus=new Computadora[controlador.getFilas()][controlador.getColumnas()];
-        this.arbitro=arbitro;
-        
-        this.controlador=controlador;
-        for(int indice=0; indice<matrizDeCompus.length; indice++){
-            for(int indiceDos=0; indiceDos<matrizDeCompus.length; indiceDos++){
-                this.matrizDeCompus[indice][indiceDos]=new Computadora();
+        this.tablero=tablero;
+        this.arbitro =new Arbitro(tablero);
+        this.matrizDeCompus=new Computadora[filas][columnas];
+        this.contador=0;
+        this.contadorDos=1;
+        matrizDeEspaciosComputadora=new int[filas][columnas];
+        for(int indice=0; indice<filas ; indice++){
+            for(int indiceDos=0; indiceDos<columnas; indiceDos++){
+                if(contador <= arbitro.getCantidadComputadoras()){
+                    this.matrizDeCompus[2*indice][2*indiceDos]=new Computadora();  
+                    contador++;
+                }
+                else{
+                    this.matrizDeCompus[2*indice][2*indiceDos]=null;  
+                }
                 
             }
         }
+    
+    }
+
+    
+    public boolean asignarIdentificador(int filas, int columnas){
+        boolean IdentificadorAsignado=false;        
+        for(int indice=0; indice<filas ; indice++){
+            for(int indiceDos=0; indiceDos<columnas; indiceDos++){
+                if(this.matrizDeCompus[indice][indiceDos]!=null){
+                    this.matrizDeEspaciosComputadora[indice][indiceDos]=contadorDos;  
+                    contadorDos++;
+                    IdentificadorAsignado=true;
+                } 
+                else{
+                    IdentificadorAsignado=false;
+                }
+            }
+        } 
+        return IdentificadorAsignado;
     }
     
-        public String toString(){
+    public String toString(){
         String resultadoMatriz="";
         int contador=1;
-            for(int fila=0; fila<4; fila++ ){
-                for(int columna=0; columna<4; columna++){
-                    if(contador%4==0){
-                        resultadoMatriz+=" | " + this.matrizDeCompus[fila][columna]  + " | \n";  
+            for(int fila=0; fila<arbitro.getFilas(); fila++ ){
+                for(int columna=0; columna<arbitro.getColumnas(); columna++){
+                    if(contador%(arbitro.getColumnas())==0){
+                        resultadoMatriz+=" | " +String.valueOf(this.matrizDeEspaciosComputadora[fila][columna]) + " | \n";  
                         contador++;
                     }else{
-                        resultadoMatriz+=" | " +  this.matrizDeCompus[fila][columna]  + " |  " ;  
+                        resultadoMatriz+=" | " + String.valueOf(this.matrizDeEspaciosComputadora[fila][columna])  + " |  " ;  
                         contador++;
                     }
 
@@ -63,7 +93,8 @@ public class TableroDeCompus
     
      public static void main(String[] parametros)
     {
-      // TableroDeCompus  tablero= new TableroDeCompus(controlador.getFilas(),controlador.getColumnas());
+     // TableroDeCompus  tablero= new TableroDeCompus(arbitro.getFilas(),arbitro.getColumnas());
     }
+    
 
 }

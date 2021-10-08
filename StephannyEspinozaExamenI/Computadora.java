@@ -9,15 +9,20 @@
 import java.util.Random;
 public class Computadora
 {
-    private int [][] matrizDeCompus;
+    private String objetoComputadora;
     private Random generador;
     private int anchoCompu;
+    private int alto;
 
     // inicializa los atributos
     public Computadora()
     {
-        this.generador=generador;
-        this.anchoCompu=this.generador.nextInt(2);
+        this.generador=new Random();
+        this.alto=1;
+        this.anchoCompu=0;
+        anchoCompu=this.generador.nextInt(2);
+        this.objetoComputadora="alto*anchoCompu" ;
+       
     }
     
     public void setRandomGenerador(Random generadorP){
@@ -39,12 +44,12 @@ public class Computadora
     } 
     
         
-    public void setMatrizDeCompus(int [][] matriz){
-        this.matrizDeCompus=matriz;
+    public void setObjetoCompu(String matriz){
+        this.objetoComputadora=matriz;
     } 
    
-    public int [][] getMatrizDeCompus(){
-        return this.matrizDeCompus;
+    public String getObjetoCompu(){
+        return this.objetoComputadora;
     } 
 
 

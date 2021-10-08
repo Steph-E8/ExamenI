@@ -21,10 +21,10 @@ public class Controlador
     public Controlador()
     {
          this.interfaz = new Interfaz(TITULO_VENTANAS, NOMBRE_ARCHIVO_IMAGEN);
-         this.tablero=tablero;
-         this.arbitro=arbitro;
-         this.filas=0;
-         this.columnas=0;
+         filas=0;
+         columnas=0;
+         this.tablero=new TableroDeCompus(filas, columnas);
+         this.arbitro= new Arbitro(tablero);
     }
 
     //Este metodo es el encargado de iniciar el juego, el cual despliega varias opciones
@@ -38,13 +38,7 @@ public class Controlador
                     interfaz.showMessageDialog(null, toString());   
                     break;
                 case 2:
-                    int CantidadComputadoras=0;
-
-                     CantidadComputadoras=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de computadoras")); 
-                      filas=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de filas")); 
-                       columnas=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de columnas")); 
-                         arbitro.jugar();
-                    
+                    arbitro.jugar();
                     break;
                 case 3:
                     int codigo = 10084;
@@ -87,15 +81,6 @@ public class Controlador
         return this.arbitro;
     }
     
-        
-    // Este metodo devuelve un objeto de tipo arbitro
-    public int getFilas(){
-        return this.filas;
-    }
-    public int getColumnas(){
-        return this.columnas;
-    }
- 
      public static void main(String[] parametros)
     {
         Controlador controlador = new Controlador();

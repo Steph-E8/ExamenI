@@ -13,13 +13,18 @@ public class Arbitro
     private JOptionPane interfaz;
     private String menu;
     private Controlador controlador;
+    private int filas;
+    private int columnas;
+    private int cantidadComputadoras;
     
-    public Arbitro()
+    public Arbitro(TableroDeCompus tableroP)
     {
         this.interfaz=interfaz;
-        this.controlador=controlador;
-        this.tablero=tablero;
-        menu = "Escoja una opción:\n1. Mostrar tablero \n2.Terminar partida";
+        this.tablero=tableroP;
+        this.filas=0;
+        this.columnas=0;
+        this.cantidadComputadoras=0;
+        menu = "Escoja una opción:\n1. Mostrar tablero de Computadoras \n2.Terminar partida";
     }
     
     
@@ -36,15 +41,14 @@ public class Arbitro
             switch (opcion){
                 case "1":
                     String opcionIngresarPalabra="";
-                    int filas=0;
-                    int columnas=0;
-                    do{
-                        interfaz.showMessageDialog(null,this.tablero.toString());
-                       //filas=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de filas para la matriz")); 
-                       //columnas=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de Columnas para la matriz"));          
-                        //tablero.TableroDeCompus(filas, columnas);
-                    
-                    }while( !opcionIngresarPalabra.equals("0") ||opcionIngresarPalabra.equals(" ") ||  opcionIngresarPalabra.equals(null)); 
+                    cantidadComputadoras=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de computadoras")); 
+                    filas=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de filas")); 
+                    columnas=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de columnas")); 
+                     interfaz.showMessageDialog(null,this.tablero.toString() + "Se lograron poner las computadoras"); 
+                    if(tablero.asignarIdentificador(filas, columnas)==true){
+                         interfaz.showMessageDialog(null,this.tablero.toString() + "Se lograron poner las computadoras"); 
+                    }
+
                     break;
                 case "2":
                     
@@ -92,6 +96,18 @@ public class Arbitro
     // Este metodo devuelve un objeto de tipo interfaz
     public TableroDeCompus getTableroDeCompus(){
         return this.tablero;
+    }
+    
+    public int getFilas(){
+        return this.filas;
+    }
+    
+    public int getColumnas(){
+        return this.columnas;
+    }
+    
+    public int getCantidadComputadoras(){
+        return this.cantidadComputadoras;
     }
     
 

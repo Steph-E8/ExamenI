@@ -1,9 +1,15 @@
 #BlueJ class context
 comment0.target=Arbitro
-comment1.params=
-comment1.target=Arbitro()
+comment1.params=tableroP
+comment1.target=Arbitro(TableroDeCompus)
 comment10.params=
 comment10.target=TableroDeCompus\ getTableroDeCompus()
+comment11.params=
+comment11.target=int\ getFilas()
+comment12.params=
+comment12.target=int\ getColumnas()
+comment13.params=
+comment13.target=int\ getCantidadComputadoras()
 comment2.params=
 comment2.target=void\ jugar()
 comment3.params=menuP
@@ -20,4 +26,4 @@ comment8.params=
 comment8.target=javax.swing.JOptionPane\ getInterfazR()
 comment9.params=tableroP
 comment9.target=void\ setTableroDeCompus(TableroDeCompus)
-numComments=11
+numComments=14
