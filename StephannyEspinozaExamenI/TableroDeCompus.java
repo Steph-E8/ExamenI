@@ -9,6 +9,7 @@ public class TableroDeCompus
     private Computadora compu;
     private Computadora[][] matrizDeCompus;
     private Arbitro arbitro;
+    private Controlador controlador;
 
     public TableroDeCompus(int filas, int columnas)
     {
@@ -16,6 +17,7 @@ public class TableroDeCompus
         this.matrizDeCompus=new Computadora[filas][columnas];
         this.arbitro=arbitro;
         
+        this.controlador=controlador;
         for(int indice=0; indice<matrizDeCompus.length; indice++){
             for(int indiceDos=0; indiceDos<matrizDeCompus.length; indiceDos++){
                 this.matrizDeCompus[indice][indiceDos]=new Computadora();
@@ -57,6 +59,12 @@ public class TableroDeCompus
         
     public Computadora [][] getMatrizDeCompu(){
         return this.matrizDeCompus;
+    }
+    
+     public static void main(String[] parametros)
+    {
+       // TableroDeCompus  tablero= new TableroDeCompus(controlador.getFilas,controlador.getColumnas);
+        tablero.iniciar();
     }
 
 }

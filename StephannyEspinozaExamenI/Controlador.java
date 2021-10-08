@@ -13,12 +13,18 @@ public class Controlador
     private final String[] OPCIONES = {"1.Salir","2.Manual","3.Distribuir Computadoras en laboratorio", "4.Ver creditos"}; 
     private Interfaz interfaz;
     private Arbitro arbitro;
+    private TableroDeCompus tablero;
+    private int filas;
+    private int columnas;
     
     //En el constructor inicializamos los atributos de las clases
     public Controlador()
     {
-         this.interfaz = new Interfaz(TITULO_VENTANAS, NOMBRE_ARCHIVO_IMAGEN);   
+         this.interfaz = new Interfaz(TITULO_VENTANAS, NOMBRE_ARCHIVO_IMAGEN);
+         this.tablero=tablero;
          this.arbitro=arbitro;
+         this.filas=0;
+         this.columnas=0;
     }
 
     //Este metodo es el encargado de iniciar el juego, el cual despliega varias opciones
@@ -31,8 +37,15 @@ public class Controlador
                 case 1: 
                     interfaz.showMessageDialog(null, toString());   
                     break;
-                case 2: 
-                    arbitro.jugar(); 
+                case 2:
+                    int CantidadComputadoras=0;
+
+                     CantidadComputadoras=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de computadoras")); 
+                      filas=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de filas")); 
+                       columnas=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de columnas")); 
+                      // this.tablero.TableroDeComputadoras(filas, columnas);
+                     //interfaz.showMessageDialog(null, "Inserte la cantidad de filas");   
+                    
                     break;
                 case 3:
                     int codigo = 10084;
@@ -78,6 +91,15 @@ public class Controlador
     // Este metodo devuelve un objeto de tipo arbitro
     public Arbitro getArbitro(){
         return this.arbitro;
+    }
+    
+        
+    // Este metodo devuelve un objeto de tipo arbitro
+    public int getFilas(){
+        return this.filas;
+    }
+    public int getColumnas(){
+        return this.columnas;
     }
  
      public static void main(String[] parametros)
