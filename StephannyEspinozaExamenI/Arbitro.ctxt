@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Arbitro
+comment1.params=filas\ columnas
+comment1.target=Arbitro(int,\ int)
+comment10.params=
+comment10.target=Computadora\ getCompu()
+comment2.params=
+comment2.target=void\ jugar()
+comment3.params=menuP
+comment3.target=void\ setMenu(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getMenu()
+comment5.params=controladorP
+comment5.target=void\ setControlador(Controlador)
+comment6.params=
+comment6.target=Controlador\ getControlador()
+comment7.params=interfazP
+comment7.target=void\ setInterfazR(Interfaz)
+comment8.params=
+comment8.target=javax.swing.JOptionPane\ getInterfazR()
+comment9.params=compuP
+comment9.target=void\ setCompu(Computadora)
+numComments=11
