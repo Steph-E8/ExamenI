@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Interfaz
+comment1.params=elTitulo\ nombreArchivoImagen
+comment1.target=Interfaz(java.lang.String,\ java.lang.String)
+comment1.text=\n\ Le\ asocia\ al\ objeto\ un\ t\u00EDtulo\ y\ una\ imagen\ que\ ser\u00E1n\ utilizados\ en\ las\ ventanas\ de\ interacci\u00F3n.\n\ Supone\ que\ el\ archivo\ con\ la\ imagen\ se\ encuentra\ en\ la\ misma\ carpeta\ del\ c\u00F3digo\ fuente.\n
+comment2.params=elMensaje
+comment2.target=void\ decirMensaje(java.lang.String)
+comment3.params=elMensaje
+comment3.target=java.lang.String\ pedirHilera(java.lang.String)
+comment4.params=lasOpciones\ elMensaje
+comment4.target=int\ pedirOpcion(java.lang.String[],\ java.lang.String)
+numComments=5

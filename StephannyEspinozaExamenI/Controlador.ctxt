@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Controlador
+comment0.text=\n\ Esta\ clase\ es\ la\ encargada\ de\ controlar\ el\ juego\ mediante\ la\ interaccion\ con\ arbitro\ e\ interfaz\n\ \n\ @author\ Stephanny\ Espinoza\n\ @version\ 20/09/2021\n
+comment1.params=
+comment1.target=Controlador()
+comment2.params=
+comment2.target=void\ iniciar()
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment4.params=interfazP
+comment4.target=void\ setInterfaz(Interfaz)
+comment5.params=
+comment5.target=Interfaz\ getInterfaz()
+comment6.params=parametros
+comment6.target=void\ main(java.lang.String[])
+numComments=7
