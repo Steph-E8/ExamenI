@@ -39,9 +39,9 @@ public class Arbitro
                     int filas=0;
                     int columnas=0;
                     do{
-                        //interfaz.showMessageDialog(null,this.tablero.toString());
-                       filas=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de filas para la matriz")); 
-                       columnas=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de Columnas para la matriz"));          
+                        interfaz.showMessageDialog(null,this.tablero.toString());
+                       //filas=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de filas para la matriz")); 
+                       //columnas=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de Columnas para la matriz"));          
                         //tablero.TableroDeCompus(filas, columnas);
                     
                     }while( !opcionIngresarPalabra.equals("0") ||opcionIngresarPalabra.equals(" ") ||  opcionIngresarPalabra.equals(null)); 

@@ -43,8 +43,7 @@ public class Controlador
                      CantidadComputadoras=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de computadoras")); 
                       filas=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de filas")); 
                        columnas=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de columnas")); 
-                      // this.tablero.TableroDeComputadoras(filas, columnas);
-                     //interfaz.showMessageDialog(null, "Inserte la cantidad de filas");   
+                         arbitro.jugar();
                     
                     break;
                 case 3:
@@ -64,11 +63,6 @@ public class Controlador
     public String toString(){
         String resultado = "";
         resultado = "La manera correcta para jugar es la siguiente: \n ";
-        resultado += "Digite  las coordenadas de cada letra" ;
-        resultado += " Ejemplo 01, donde 0 indica que es la fila y 1 la comuna. \n" ;
-        resultado += "Para nuestro caso debe digitar cuatro coordenadas pegadas: ejemplo: 02122232. \n  ";
-        resultado += "Luego se desplegara un menu con tres opciones, \n una mostrar tablero, dos revolver y tres devolverse al menu princial"; 
-        resultado += "\n en caso de querer regresar al menu principal debe introducir: 00000000";
         return resultado;
         
     }

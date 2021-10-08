@@ -11,10 +11,10 @@ public class TableroDeCompus
     private Arbitro arbitro;
     private Controlador controlador;
 
-    public TableroDeCompus(int filas, int columnas)
+    public TableroDeCompus()
     {
         this.compu= compu;
-        this.matrizDeCompus=new Computadora[filas][columnas];
+        this.matrizDeCompus=new Computadora[controlador.getFilas()][controlador.getColumnas()];
         this.arbitro=arbitro;
         
         this.controlador=controlador;
@@ -63,8 +63,7 @@ public class TableroDeCompus
     
      public static void main(String[] parametros)
     {
-       // TableroDeCompus  tablero= new TableroDeCompus(controlador.getFilas,controlador.getColumnas);
-        tablero.iniciar();
+      // TableroDeCompus  tablero= new TableroDeCompus(controlador.getFilas(),controlador.getColumnas());
     }
 
 }

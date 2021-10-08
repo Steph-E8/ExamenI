@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=TableroDeCompus
 comment0.text=\n\ Esta\ clase\ es\ el\ tablero\ del\ juego\ realiado\ *\ \n\ @author\ Stephanny\ Espinoza\n\ @version\ 8/10/2021\n
-comment1.params=filas\ columnas
-comment1.target=TableroDeCompus(int,\ int)
+comment1.params=
+comment1.target=TableroDeCompus()
 comment2.params=
 comment2.target=java.lang.String\ toString()
 comment3.params=compuP
@@ -13,4 +13,6 @@ comment5.params=compuP
 comment5.target=void\ setMatrizDeCompu(Computadora[][])
 comment6.params=
 comment6.target=Computadora[][]\ getMatrizDeCompu()
-numComments=7
+comment7.params=parametros
+comment7.target=void\ main(java.lang.String[])
+numComments=8
