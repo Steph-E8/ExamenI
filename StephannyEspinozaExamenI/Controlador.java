@@ -12,11 +12,13 @@ public class Controlador
     private final String MENSAJE = "Proceda a elegir una opción";
     private final String[] OPCIONES = {"1.Salir","2.Manual para Jugar","3.Jugar", "4.Ver creditos"}; 
     private Interfaz interfaz;
+    private Arbitro arbitro;
     
     //En el constructor inicializamos los atributos de las clases
     public Controlador()
     {
          this.interfaz = new Interfaz(TITULO_VENTANAS, NOMBRE_ARCHIVO_IMAGEN);   
+         this.arbitro=arbitro;
     }
 
     //Este metodo es el encargado de iniciar el juego, el cual despliega varias opciones
@@ -30,7 +32,7 @@ public class Controlador
                     interfaz.showMessageDialog(null, toString());   
                     break;
                 case 2: 
-                    //arbitro.jugar(); 
+                    arbitro.jugar(); 
                     break;
                 case 3:
                     int codigo = 10084;
@@ -66,6 +68,16 @@ public class Controlador
     // Este metodo devuelve un objeto de tipo interfaz
     public Interfaz getInterfaz(){
         return this.interfaz;
+    }
+    
+        // Este metodo inicializa un objeto de tipo arbitro por parametro
+    public void setArbitro(Arbitro arbitroP){
+        this.arbitro=arbitroP;
+    }
+    
+    // Este metodo devuelve un objeto de tipo arbitro
+    public Arbitro getArbitro(){
+        return this.arbitro;
     }
  
      public static void main(String[] parametros)

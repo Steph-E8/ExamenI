@@ -9,18 +9,16 @@ import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 public class Arbitro
 {
-    private Computadora compu;
-    private Computadora[][] matrizDeCompus;
+    private TableroDeCompus tablero;
     private JOptionPane interfaz;
     private String menu;
     private Controlador controlador;
     
-    public Arbitro(int filas, int columnas)
+    public Arbitro()
     {
         this.interfaz=interfaz;
         this.controlador=controlador;
-        this.compu= compu;
-        this.matrizDeCompus=new Computadora[filas][columnas];
+        this.tablero=tablero;
         menu = "Escoja una opción:\n1. Mostrar tablero \n2. Revolver tablero \n3. Terminar partida";
     }
     
@@ -47,7 +45,7 @@ public class Arbitro
                     String opcionIngresarPalabra="";
                     Object object=new Object();
                     do{
-                        //interfaz.showMessageDialog(null,this.tablero.toString()+ "\n" +simbolo2 + " Palabras acertadas: \n\n " +  this.tablero.imprimirMatrizPalabras() +" \n "+ simbolo + " " + "SU PUNTAJE TOTAL ES: " + tablero.getContadorPuntaje()+ " " + simbolo1);
+                        interfaz.showMessageDialog(null,this.tablero.toString()+ "\n" +simbolo2 + " Palabras acertadas: \n\n " +  this.tablero.imprimirMatrizPalabras() +" \n "+ simbolo + " " + "SU PUNTAJE TOTAL ES: " + tablero.getContadorPuntaje()+ " " + simbolo1);
                         do{
                             object=(this.interfaz.showInputDialog(null,"Ingrese las coordenadas de cada letra de la palabra deseada!! "+ simbolo1+ "\n  Ejemplo: 01213141 "+ " \n (digite 00000000 si desea finalizar)")); 
                         }while(object==null);
@@ -94,13 +92,16 @@ public class Arbitro
         return this.interfaz;
     }
     
-    public void setCompu(Computadora compuP){
-        this.compu=compuP;
+        public void setTableroDeCompus(TableroDeCompus tableroP){
+        this.tablero= tableroP;
     }
-        
-    public Computadora getCompu(){
-        return this.compu;
+    
+    // Este metodo devuelve un objeto de tipo interfaz
+    public TableroDeCompus getTableroDeCompus(){
+        return this.tablero;
     }
+    
+
     
 
 }
