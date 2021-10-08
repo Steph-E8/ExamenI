@@ -8,15 +8,17 @@ public class TableroDeCompus
 {
     private Computadora compu;
     private Computadora[][] matrizDeCompus;
+    private Arbitro arbitro;
 
     public TableroDeCompus(int filas, int columnas)
     {
         this.compu= compu;
         this.matrizDeCompus=new Computadora[filas][columnas];
+        this.arbitro=arbitro;
         
         for(int indice=0; indice<matrizDeCompus.length; indice++){
             for(int indiceDos=0; indiceDos<matrizDeCompus.length; indiceDos++){
-                this.matrizDeCompus[indice][indiceDos]=new Computadora(filas, columnas);
+                this.matrizDeCompus[indice][indiceDos]=new Computadora();
                 
             }
         }

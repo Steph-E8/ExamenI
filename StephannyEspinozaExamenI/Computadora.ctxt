@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Computadora
-comment1.params=filas\ columnas
-comment1.target=Computadora(int,\ int)
+comment1.params=
+comment1.target=Computadora()
 comment2.params=generadorP
 comment2.target=void\ setRandomGenerador(java.util.Random)
 comment3.params=

@@ -14,9 +14,8 @@ public class Computadora
     private int anchoCompu;
 
     // inicializa los atributos
-    public Computadora(int filas, int columnas)
+    public Computadora()
     {
-        this.matrizDeCompus=new int [filas][columnas];
         this.generador=generador;
         this.anchoCompu=this.generador.nextInt(2);
     }

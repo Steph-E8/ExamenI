@@ -19,7 +19,7 @@ public class Arbitro
         this.interfaz=interfaz;
         this.controlador=controlador;
         this.tablero=tablero;
-        menu = "Escoja una opción:\n1. Mostrar tablero \n2. Revolver tablero \n3. Terminar partida";
+        menu = "Escoja una opción:\n1. Mostrar tablero \n2.Terminar partida";
     }
     
     
@@ -33,25 +33,26 @@ public class Arbitro
             opcion = interfaz.showInputDialog(null, menu);         
             }while(opcion==null || opcion.equals(""));
            
-            int numeroIngresado=0;
             switch (opcion){
                 case "1":
                     String opcionIngresarPalabra="";
                     int filas=0;
                     int columnas=0;
                     do{
-                        interfaz.showMessageDialog(null,this.tablero.toString());
-                      // filas=this.interfaz.showInputDialog(null,"Ingrese la cantidad de filas para la matriz"); 
-                       //columnas=this.interfaz.showInputDialog(null,"Ingrese la cantidad de Columnas para la matriz");          
+                        //interfaz.showMessageDialog(null,this.tablero.toString());
+                       filas=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de filas para la matriz")); 
+                       columnas=Integer.parseInt(this.interfaz.showInputDialog(null,"Ingrese la cantidad de Columnas para la matriz"));          
+                        //tablero.TableroDeCompus(filas, columnas);
+                    
                     }while( !opcionIngresarPalabra.equals("0") ||opcionIngresarPalabra.equals(" ") ||  opcionIngresarPalabra.equals(null)); 
                     break;
                 case "2":
-                    // this.tablero.agitarMatrizTablero();
+                    
                     break;
                 case "3":
                     break;
             }
-        }while(!opcion.equals("3") || opcion.equals(" ") || opcion.equals(null));
+        }while(!opcion.equals("2") || opcion.equals(" ") || opcion.equals(null));
     }
     
         //asigan mediante parametro un string al atributo de clase
