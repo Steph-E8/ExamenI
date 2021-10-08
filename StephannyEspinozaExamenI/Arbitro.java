@@ -36,22 +36,14 @@ public class Arbitro
             int numeroIngresado=0;
             switch (opcion){
                 case "1":
-                    int codigo = 10084;
-                    char simbolo = (char)codigo;
-                    int codigo1 = 9786;
-                    char simbolo1 = (char)codigo1;
-                    int codigo2 = 10035;
-                    char simbolo2 = (char)codigo2;
                     String opcionIngresarPalabra="";
-                    Object object=new Object();
+                    int filas=0;
+                    int columnas=0;
                     do{
-                        interfaz.showMessageDialog(null,this.tablero.toString()+ "\n" +simbolo2 + " Palabras acertadas: \n\n " +  this.tablero.imprimirMatrizPalabras() +" \n "+ simbolo + " " + "SU PUNTAJE TOTAL ES: " + tablero.getContadorPuntaje()+ " " + simbolo1);
-                        do{
-                            object=(this.interfaz.showInputDialog(null,"Ingrese las coordenadas de cada letra de la palabra deseada!! "+ simbolo1+ "\n  Ejemplo: 01213141 "+ " \n (digite 00000000 si desea finalizar)")); 
-                        }while(object==null);
-                        opcionIngresarPalabra=(String)(object); 
-                       // tablero.revisarVecindario(opcionIngresarPalabra);
-                    }while( !opcionIngresarPalabra.equals("00000000") ||opcionIngresarPalabra.equals(" ") ||  opcionIngresarPalabra.equals(null)); 
+                        interfaz.showMessageDialog(null,this.tablero.toString());
+                      // filas=this.interfaz.showInputDialog(null,"Ingrese la cantidad de filas para la matriz"); 
+                       //columnas=this.interfaz.showInputDialog(null,"Ingrese la cantidad de Columnas para la matriz");          
+                    }while( !opcionIngresarPalabra.equals("0") ||opcionIngresarPalabra.equals(" ") ||  opcionIngresarPalabra.equals(null)); 
                     break;
                 case "2":
                     // this.tablero.agitarMatrizTablero();

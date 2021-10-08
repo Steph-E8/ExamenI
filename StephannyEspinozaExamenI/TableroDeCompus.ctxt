@@ -1,14 +1,16 @@
 #BlueJ class context
 comment0.target=TableroDeCompus
-comment0.text=\n\ Write\ a\ description\ of\ class\ TableroDeCompus\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Esta\ clase\ es\ el\ tablero\ del\ juego\ realiado\ *\ \n\ @author\ Stephanny\ Espinoza\n\ @version\ 8/10/2021\n
 comment1.params=filas\ columnas
 comment1.target=TableroDeCompus(int,\ int)
-comment2.params=compuP
-comment2.target=void\ setCompu(Computadora)
-comment3.params=
-comment3.target=Computadora\ getCompu()
-comment4.params=compuP
-comment4.target=void\ setMatrizDeCompu(Computadora[][])
-comment5.params=
-comment5.target=Computadora[][]\ getMatrizDeCompu()
-numComments=6
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment3.params=compuP
+comment3.target=void\ setCompu(Computadora)
+comment4.params=
+comment4.target=Computadora\ getCompu()
+comment5.params=compuP
+comment5.target=void\ setMatrizDeCompu(Computadora[][])
+comment6.params=
+comment6.target=Computadora[][]\ getMatrizDeCompu()
+numComments=7

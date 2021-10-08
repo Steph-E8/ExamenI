@@ -10,7 +10,7 @@ public class Controlador
     private final String TITULO_VENTANAS = "Bienvenida(o) :D";
     private final String NOMBRE_ARCHIVO_IMAGEN = "Ima(2).png";
     private final String MENSAJE = "Proceda a elegir una opción";
-    private final String[] OPCIONES = {"1.Salir","2.Manual para Jugar","3.Jugar", "4.Ver creditos"}; 
+    private final String[] OPCIONES = {"1.Salir","2.Manual","3.Distribuir Computadoras en laboratorio", "4.Ver creditos"}; 
     private Interfaz interfaz;
     private Arbitro arbitro;
     
@@ -37,7 +37,7 @@ public class Controlador
                 case 3:
                     int codigo = 10084;
                     char simbolo = (char)codigo;
-                    interfaz.showMessageDialog(null, "Este juego fue elaborado por \n Stephanny Espinoza" +simbolo);
+                    interfaz.showMessageDialog(null, "Este juego fue elaborado por \n Stephanny Espinoza, B42411" +simbolo);
                     break;
                 case 4:
                     interfaz.showMessageDialog(null, "E");
